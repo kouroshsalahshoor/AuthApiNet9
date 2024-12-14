@@ -112,7 +112,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapIdentityApi<ApplicationUser>();
+app.MapGroup("api/identity").MapIdentityApi<ApplicationUser>();
 
 app.UseAuthentication();
 app.UseAuthorization();
